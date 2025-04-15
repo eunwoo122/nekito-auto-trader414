@@ -1,25 +1,26 @@
 name: Auto Commit
 
 on:
-  push:
-    paths:
-      - "nekito_multi_trade_bot.py"
+  schedule:
+    - cron: '*/10 * * * *'  # 10분마다
   workflow_dispatch:
 
 jobs:
-  commit-and-push:
+  commit:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
+      - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Set Git config
-        run: |
-          git config --global user.name "nekito-bot"
-          git config --global user.email "bot@nekito.com"
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
 
       - name: Commit changes
         run: |
-          git add nekito_multi_trade_bot.py
-          git commit -m "🧠 자동 조건 완화 커밋" || echo "No changes"
-          git push || echo "Nothing to push"
+          git config user.name "nekito-bot"
+          git config user.email "nekito-bot@example.com"
+          git add .
+          git commit -m "자동 전략 조건 커밋" || echo "No changes"
+          git push
