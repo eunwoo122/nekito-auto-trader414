@@ -43,7 +43,7 @@ symbols = [
 ]
 
 positions = {symbol: {"entry": None, "volume": None} for symbol in symbols}
-buy_krw = 1000  # 종목당 매수 금액
+buy_krw = 5000  # 종목당 매수 금액
 
 print("🚀 Nekito 다중 종목 실전 자동매매 시작")
 send_telegram("🚀 Nekito 다중 종목 자동매매 시작됨!")
