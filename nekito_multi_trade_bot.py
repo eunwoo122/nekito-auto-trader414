@@ -1,4 +1,6 @@
-
+# 맨 위에 추가
+import logging
+logging.basicConfig(filename='log.txt', level=logging.INFO, format='%(asctime)s - %(message)s')
 import pyupbit
 import time
 import requests
@@ -96,3 +98,8 @@ while True:
         time.sleep(1)
 
     time.sleep(60)
+# 코인 루프 돌릴 때
+logging.info(f"[{symbol}] RSI: {rsi:.1f}, Stoch: {stoch:.1f}, Price: {price}")
+
+# 매수 시도 직전
+logging.info(f"[매수 시도] {symbol} - 금액: {amount}원")
