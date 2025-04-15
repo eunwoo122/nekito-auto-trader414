@@ -99,6 +99,17 @@ symbols = [
 ]
 
 amount = 5000
+positions = {}
+
+balances = upbit.get_balances()
+for b in balances:
+    symbol = f"KRW-{b['currency']}"
+    if float(b['balance']) > 0 and symbol not in positions:
+        entry_price = float(b['avg_buy_price'])
+        positions[symbol] = {
+            "entry_price": entry_price,
+            "entry_time": datetime.now()
+        }
 
 while True:
     auto_adjust_conditions()
