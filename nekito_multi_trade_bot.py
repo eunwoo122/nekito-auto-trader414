@@ -61,3 +61,5 @@ while True:
             logging.info(f"❗ 예외 발생: {e}")
             send_telegram(f"❗ 예외 발생: {e}")
     time.sleep(60)
+
+# ✅ 조건 자동 완화: 2025-04-15 03:03:18.765890
