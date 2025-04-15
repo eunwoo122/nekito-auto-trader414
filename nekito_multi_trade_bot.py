@@ -1,4 +1,3 @@
-# 맨 위에 추가
 import logging
 logging.basicConfig(filename='log.txt', level=logging.INFO, format='%(asctime)s - %(message)s')
 import pyupbit
