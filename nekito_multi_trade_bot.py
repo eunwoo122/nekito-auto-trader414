@@ -4,13 +4,13 @@ import time
 import requests
 
 # 업비트 API 키 설정
-ACCESS_KEY = "여기에_너의_ACCESS_KEY"
-SECRET_KEY = "여기에_너의_SECRET_KEY"
+ACCESS_KEY = "Fq3A6HBQaP4bMQCCCHS69PJRD2q0xJe1aNS0XbyC"
+SECRET_KEY = "7N6QLHJ5AxEXZq0a30buajZnG9f3BsrZx3VQAE9x"
 upbit = pyupbit.Upbit(ACCESS_KEY, SECRET_KEY)
 
 # 텔레그램 설정 (옵션)
-TELEGRAM_TOKEN = "여기에_텔레그램_봇_토큰"
-TELEGRAM_CHAT_ID = "여기에_챗_ID"
+TELEGRAM_TOKEN = "7733325333:AAEQzQX-kZQFiNJi6pL87YJ8cQQtIOYtwhw"
+TELEGRAM_CHAT_ID = "8115626217"
 
 def send_telegram(message):
     if TELEGRAM_TOKEN and TELEGRAM_CHAT_ID:
